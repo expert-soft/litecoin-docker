@@ -1,8 +1,6 @@
 # litecoin-docker
 
-## Dev environment setup TL;DR
-
-1. git clone 
+1. git clone https://github.com/expert-soft/litecoin-docker.git
 2. docker build -t litecoin-docker litecoin-docker/
 3. mkdir litecoin_data
 4. cp litecoin-docker/litecoin.conf litecoin_data/
