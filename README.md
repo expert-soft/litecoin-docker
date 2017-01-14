@@ -4,7 +4,7 @@
 2. docker build -t litecoin-docker litecoin-docker/
 3. mkdir litecoin_data
 4. cp litecoin-docker/litecoin.conf litecoin_data/
-5. docker run -v litecoin_data:/home/root/litecoin/data litecoin-docker /bin/sh -c "./litecoind -daemon=0 -conf=/home/root/litecoin/data/litecoin.conf -datadir=/home/root/litecoin/data"
+5. docker run -d -v {$PWD}/litecoin_data:/root/litecoin/data litecoin-docker /bin/bash -c "/root/litecoin/app/start.sh"
 
 ## License
 

@@ -12,17 +12,18 @@ RUN export DEBIAN_FRONTEND=noninteractive && \
         apt-get autoremove -y && \
         apt-get clean
 
-WORKDIR /home/root
+WORKDIR /root
 
 RUN mkdir litecoin && \
     mkdir litecoin/data
 
 ADD app/ litecoin/app/
 ADD start.sh litecoin/app/start.sh
+RUN chmod -R 700 litecoin/app/*
 ADD litecoin.conf litecoin/data/litecoin.conf
 
-WORKDIR /home/root/litecoin/app
+WORKDIR /root/litecoin/app
 
-EXPOSE 10398 10399
+EXPOSE 9332
 
 CMD ["/bin/bash"]
